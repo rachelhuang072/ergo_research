@@ -34,6 +34,7 @@ public class VRHeightOffset : MonoBehaviour {
       if (deviceHeightPair != null) {
         transform.Translate(Vector3.up * deviceHeightPair.HeightOffset);
       }
+      transform.position = new Vector3(-1f, 1.9f, -4.5f);
+      }
     }
-  }
 }
