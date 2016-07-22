@@ -35,6 +35,13 @@ public class VRHeightOffset : MonoBehaviour {
         transform.Translate(Vector3.up * deviceHeightPair.HeightOffset);
       }
       transform.position = new Vector3(-1f, 1.9f, -4.5f);
-      }
+      transform.rotation = Quaternion.identity;
+
+        }
+    }
+
+    void Update()
+    {
+        transform.rotation = Quaternion.identity;
     }
 }

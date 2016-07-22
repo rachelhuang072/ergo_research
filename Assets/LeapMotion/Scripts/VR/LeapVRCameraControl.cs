@@ -61,9 +61,9 @@ namespace Leap.Unity {
 #endif
 
       _hasDispatchedValidCameraParams = false;
-    }
+        }
 
-    void OnPreCull() {
+        void OnPreCull() {
 #if UNITY_EDITOR
       if (!Application.isPlaying) {
         return;

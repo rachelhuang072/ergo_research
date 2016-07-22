@@ -214,7 +214,7 @@ public class s_Data : MonoBehaviour
 	{
 		System.IO.FileStream fs = null;
 		System.IO.StreamWriter sw = null;
-		string head = "Subject #,Experiment,Group,Condition,Trial,DZ Radius,Sensitivity,Curve Shape,Target Distance,Target Diameter,Click Hit,Click Distance,Overshot,Most Further Hand Position,Click Time";
+		string head = "Subject #,Experiment,Group,Condition,Trial,DZ Radius,Sensitivity,Curve Shape,Target Distance,Target Diameter,Click Hit,Click Distance,Overshot,Farthest Hand Position,Click Time";
 		if (combine == 0)
 		{
 			System.DateTime Now = System.DateTime.Now;

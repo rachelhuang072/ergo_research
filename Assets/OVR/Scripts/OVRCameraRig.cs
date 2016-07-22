@@ -159,9 +159,11 @@ public class OVRCameraRig : MonoBehaviour
 		{
 			UpdatedAnchors(this);
 		}
-	}
+        transform.rotation = Quaternion.identity;
 
-	public void EnsureGameObjectIntegrity()
+    }
+
+    public void EnsureGameObjectIntegrity()
 	{
 		if (trackingSpace == null)
 			trackingSpace = ConfigureRootAnchor(trackingSpaceName);

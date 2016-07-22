@@ -168,20 +168,24 @@ public class s_Controller : MonoBehaviour
 //				Debug.Log ("entering target zone");
 				return 0;
 			} else if ((DateTime.Now - LastHit).TotalMilliseconds >= 500) { //wait half a second in target
-				Sound.PlayHit ();
+                CurrentTest.ClickTime = DateTime.Now;
+                CurrentTest.ClickDistance = Self.transform.position.z - Target.transform.position.z;
+                Sound.PlayHit ();
 				CurrentTest.Hit = 1;
 				LastHit = new DateTime ();
 				StartNextTest ();
 				return 1;
 			}
-			return 0;
+            return 0;
 		} else {
 			LastHit = new DateTime ();
 //			Debug.Log ("not in the target zone");
 		}
 
+        //StartNextTest ();
 		return 0;
 	}
+
 
 	int Click()
 	{
@@ -200,7 +204,7 @@ public class s_Controller : MonoBehaviour
 		if ((Mathf.Abs (ZeroCenterD - Gesture.D) > CurrentTest.DeadZoneRadius + 2) &&
 		    (LastNonHit == default(DateTime) || (DateTime.Now - LastNonHit).TotalMilliseconds > 900) &&
 			(DateTime.Now - LastHit).TotalMilliseconds > 500) {
-			Debug.Log ("trying to click when not standing still");
+			//Debug.Log ("trying to click when not standing still");
 			Sound.PlayNotHit ();
 			LastNonHit = DateTime.Now;
 			return -2;

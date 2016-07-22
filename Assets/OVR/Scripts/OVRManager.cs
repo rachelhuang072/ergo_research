@@ -446,7 +446,7 @@ public class OVRManager : MonoBehaviour
 	/// <summary>
 	/// If true, each scene load will cause the head pose to reset.
 	/// </summary>
-	public bool resetTrackerOnLoad = false;
+	public bool resetTrackerOnLoad = true;
 
 	/// <summary>
 	/// True if the current platform supports virtual reality.
