@@ -107,7 +107,8 @@ public class s_Gui : MonoBehaviour
 	public void RedrawCurve()
 	{
 		Color32[] c = new Color32[1];
-		c[0] = new Color32(250, 250, 250, 150);
+		//c[0] = new Color32(250, 250, 250, 150);
+        c[0] = new Color32(0, 0, 0, 150);
 
 		Destroy(CurveTexture);
 		CurveTexture = Instantiate(BackTexture) as Texture2D;

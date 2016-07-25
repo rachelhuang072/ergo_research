@@ -14,7 +14,7 @@ public class Tests
 	public int Trial;
 
 	// important: the default parameter values is indeed here
-	public float DeadZoneRadius = 30f;
+	public float DeadZoneRadius = 25f;
 	public float CurveShapeExp = 1.0f;
 	public float Sensitivity = 21f;
 

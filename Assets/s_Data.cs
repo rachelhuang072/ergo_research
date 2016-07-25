@@ -82,7 +82,7 @@ public class s_Data : MonoBehaviour
 		}
 	}
 
-	public int[] DistanceRandomize(int id, char mode) //for distances; probably won't have to change
+	public int[] DistanceRandomize(int id, char mode) //for distances
 	{
 		int trialnum = DebugFewerTrials ? 9 : 30;
 		int warmupnum = 6;
@@ -139,7 +139,7 @@ public class s_Data : MonoBehaviour
 			subtest_2.GroupLabel = 0;
 			subtest_2.Condition = 0;
 			subtest_2.Trial = j;
-			subtest_2.DeadZoneRadius = 30f;
+			subtest_2.DeadZoneRadius = 25f;
 			subtest_2.Sensitivity = 21f;
 			subtest_2.CurveShapeExp = 1.0f;
 			subtest_2.TargetDiameter = targetdiameter;
@@ -173,9 +173,9 @@ public class s_Data : MonoBehaviour
 
 		//this is where the different levels are set (changing them will change parameters in game)
 		if (themode == 'd' && condition == 1)
-			deadzoneradius = 20f;
+			deadzoneradius = 10f;
 		else if (themode == 'd' && condition == 2)
-			deadzoneradius = 30f;
+			deadzoneradius = 25f;
 		else if (themode == 'd' && condition == 3)
 			deadzoneradius = 40f;
 		else if (themode == 's' && condition == 1)
