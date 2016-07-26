@@ -93,10 +93,12 @@ public class s_Data : MonoBehaviour
 		System.Random rm = new System.Random(id * 100 + mode);
 		for (int i = 0; i < warmupnum; i++)
 		{
-			if (mode == 'x')
-				distances[i] = 15 - (i % 3) * 6;
-			else
-				distances[i] = (i % 3) * 6 + 3;
+            if (mode == 'x')
+                //distances[i] = 15 - (i % 3) * 6;
+                distances[i] = 27 - (i % 3) * 12;
+            else
+                //distances[i] = (i % 3) * 6 + 3;
+                distances[i] = (i % 3) * 12 + 3;
 		}
 		int mostr = 1;
 		for (int i = warmupnum; i < trialnum; i++)
@@ -112,7 +114,8 @@ public class s_Data : MonoBehaviour
 			}
 			while (count[r] >= (trialnum - warmupnum) / 3);
 			count[r]++;
-			distances[i] = r * 6 + 3;
+            //distances[i] = r * 6 + 3;
+            distances[i] = r * 12 + 3;
 			int maxr = 0;
 			for (int ri = 0; ri < 3; ri++)
 			{

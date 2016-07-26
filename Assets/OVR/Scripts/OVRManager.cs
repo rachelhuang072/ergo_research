@@ -548,8 +548,11 @@ public class OVRManager : MonoBehaviour
 #if !UNITY_EDITOR
 		paused = !OVRPlugin.hasVrFocus;
 #endif
-
-		if (OVRPlugin.shouldQuit)
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            display.RecenterPose();
+        }
+        if (OVRPlugin.shouldQuit)
 			Application.Quit();
 
 		if (OVRPlugin.shouldRecenter)
