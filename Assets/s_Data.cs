@@ -182,7 +182,7 @@ public class s_Data : MonoBehaviour
 		else if (themode == 'd' && condition == 3)
 			deadzoneradius = 40f;
 		else if (themode == 's' && condition == 1)
-			sensitivity = 14f;
+			sensitivity = 12f;
 		else if (themode == 's' && condition == 2)
 			sensitivity = 21f;
 		else if (themode == 's' && condition == 3)
