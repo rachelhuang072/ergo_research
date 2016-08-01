@@ -359,6 +359,7 @@ public class s_Controller : MonoBehaviour
 		if (Target == null)
 			Debug.Log("Target not found");
 		ResetMode('1');
+		ZeroCenterD = -100f;
 	}
 	
 	// Update is called once per frame
