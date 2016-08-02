@@ -359,6 +359,7 @@ public class s_Controller : MonoBehaviour
 		if (Target == null)
 			Debug.Log("Target not found");
 		ResetMode('1');
+        ZeroCenterD = -100f;
 	}
 	
 	// Update is called once per frame
@@ -396,6 +397,7 @@ public class s_Controller : MonoBehaviour
 		if (Input.GetKey(KeyCode.Z) && (Input.GetKey(KeyCode.LeftAlt) || Input.GetKey(KeyCode.RightAlt)))
 		{
 			ZeroCenterD = Gesture.D;
+            //Debug.Log(ZeroCenterD);
 //			ZeroCenterD = (MaxAngle + MinAngle) * 0.5f;
 //			ZeroCenterD = (MaxAngle + MinAngle) / 2;
 		}
